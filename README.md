@@ -35,6 +35,7 @@ Além disso, o projeto busca proporcionar uma experiência agradável de leitura
 - Fundo com imagem temática de elementos literários
 - Uso de sombras e espaçamento para criar hierarquia visual
 
+## 🚀 Como executar o projeto
 
 1. Clone o repositório:
 ```bash
