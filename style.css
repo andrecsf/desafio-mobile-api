@@ -1,0 +1,139 @@
+body {
+    font-family: "EB Garamond", serif;
+    background:
+        linear-gradient(rgba(234,224,224,0.9), rgba(234,224,224,0.9)),
+        url("images/fundo.png");
+    
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 40px;
+
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.titulo {
+    margin: 0 0 26px 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 1.1;
+}
+
+.descricao {
+    font-size: 20px;
+    padding-bottom: 10px;
+    max-width: 700px;
+}
+
+h2 {
+    margin-bottom: 6px;
+    font-size: 28px;
+    border-bottom: 1px;
+    padding-bottom: 4px;
+}
+
+h3{
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-size: 20px;
+}
+
+.autor {
+    margin-top: 2px;
+    margin-bottom: 36px;
+}
+
+.wiki-autor {
+    font-size: 18px;
+    font-style: italic;
+    color: #666;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.wiki-autor:hover {
+    font-size: 18px;
+    font-style: italic;
+    color: #ed1c24;
+}
+
+#poesia{
+    font-family: "EB Garamond", serif;
+    font-size: 22px;
+    line-height: 1.8;
+    max-width: 600px;
+}
+
+hr {
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: #666;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 30px;
+    }
+
+    .titulo {
+        font-size: 32px;
+    }
+
+    .descricao {
+        font-size: 18px;
+    }
+
+    #poesia {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .titulo {
+        font-size: 26px;
+        letter-spacing: 0.5px;
+    }
+
+    .descricao {
+        font-size: 16px;
+    }
+
+    #poesia {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    button {
+        width: 100%;
+        padding: 14px;
+        font-size: 16px;
+    }
+}
