@@ -2,7 +2,7 @@ body {
     font-family: "EB Garamond", serif;
     background:
         linear-gradient(rgba(234,224,224,0.9), rgba(234,224,224,0.9)),
-        url("images/fundo.png");
+        url("fundo.png");
     
 }
 
