@@ -1,4 +1,4 @@
-const CACHE_NAME = "poesia-app-v2";
+const CACHE_NAME = "poesia-app-v3";
 
 const urlsToCache = [
   "/",
@@ -36,7 +36,7 @@ self.addEventListener("fetch", event => {
   event.respondWith(
     fetch(event.request)
       .then(response => {
-        return caches.open("poesia-cache").then(cache => {
+        return caches.open(CACHE_NAME).then(cache => {
           cache.put(event.request, response.clone());
           return response;
         });
@@ -44,11 +44,5 @@ self.addEventListener("fetch", event => {
       .catch(() => {
         return caches.match(event.request);
       })
-  );
-});
-        .catch(() => {
-          return new Response("Você está offline 😢");
-        });
-    })
   );
 });
