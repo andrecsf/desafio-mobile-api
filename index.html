@@ -27,6 +27,16 @@
         <div id="poesia">
         </div>
 
+            <button onclick="testarAudio()">TESTAR AUDIO</button>
+
+<script>
+function testarAudio() {
+  const fala = new SpeechSynthesisUtterance("Hello, testing audio");
+  fala.lang = "en-US";
+  speechSynthesis.speak(fala);
+}
+</script>
+
     </div>
 
     <script src="script.js"></script>
@@ -38,16 +48,6 @@
                 .catch(err => console.log("Erro:", err));
         }
     </script>
-
-    <button onclick="testarAudio()">TESTAR AUDIO</button>
-
-<script>
-function testarAudio() {
-  const fala = new SpeechSynthesisUtterance("Hello, testing audio");
-  fala.lang = "en-US";
-  speechSynthesis.speak(fala);
-}
-</script>
 
 </body>
 
