@@ -7,14 +7,13 @@ document.addEventListener("DOMContentLoaded", () => {
     botao.addEventListener("click", () => {
         const texto = poesiaEl.innerText;
 
-        console.log("TEXTO:", texto); // debug
+        console.log("TEXTO:", texto); 
 
         if (!texto.trim()) {
             alert("Gere uma poesia primeiro!");
             return;
         }
 
-        // sempre limpa antes
         speechSynthesis.cancel();
 
         if (falando) {
