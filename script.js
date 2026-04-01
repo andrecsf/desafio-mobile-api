@@ -14,12 +14,11 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        speechSynthesis.cancel();
-
         if (falando) {
-            falando = false;
-            botao.textContent = "🔊";
-            return;
+        speechSynthesis.cancel();
+        falando = false;
+        botao.textContent = "🔊";
+        return;
         }
 
         const fala = new SpeechSynthesisUtterance(texto);
