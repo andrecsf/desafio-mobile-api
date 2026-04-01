@@ -1,4 +1,4 @@
-const CACHE_NAME = "poesia-app-v3";
+const CACHE_NAME = "poesia-app-v2";
 
 const urlsToCache = [
   "/",
