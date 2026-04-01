@@ -19,24 +19,26 @@
             leitura.
         </p>
         <p>Clique para ver sua poesia!</p>
-        <button onclick="getPoesia()">Sortear!</button>
+        <div class="botoes">
+            <button onclick="getPoesia()">Sortear!</button>
+            <button id="btn-audio">🔊</button>
+        </div>
         <hr />
         <div id="poesia">
         </div>
-        
-        <button id="btn-audio">🔊</button>
+
     </div>
 
     <script src="script.js"></script>
 
     <script>
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('service-worker.js')
-    .then(() => console.log("Service Worker registrado"))
-    .catch(err => console.log("Erro:", err));
-}
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+                .then(() => console.log("Service Worker registrado"))
+                .catch(err => console.log("Erro:", err));
+        }
     </script>
-    
+
 </body>
 
 </html>
