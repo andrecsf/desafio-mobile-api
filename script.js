@@ -7,36 +7,45 @@ document.addEventListener("DOMContentLoaded", () => {
     botao.addEventListener("click", () => {
         const texto = poesiaEl.innerText;
 
-        if (!texto.trim()) return;
+        console.log("TEXTO:", texto); // debug
+
+        if (!texto.trim()) {
+            alert("Gere uma poesia primeiro!");
+            return;
+        }
+
+        // sempre limpa antes
+        speechSynthesis.cancel();
 
         if (falando) {
-            speechSynthesis.cancel();
             falando = false;
             botao.textContent = "🔊";
             return;
         }
 
         const fala = new SpeechSynthesisUtterance(texto);
-
         fala.lang = "en-US";
 
-        const vozes = speechSynthesis.getVoices();
-        const vozEN = vozes.find(v => v.lang.includes("en"));
-
-        if (vozEN) {
-            fala.voice = vozEN;
-        }
+        fala.onstart = () => {
+            console.log("COMEÇOU");
+        };
 
         fala.onend = () => {
+            console.log("TERMINOU");
             falando = false;
             botao.textContent = "🔊";
         };
 
+        fala.onerror = (e) => {
+            console.log("ERRO:", e);
+        };
+
         speechSynthesis.speak(fala);
+
         falando = true;
         botao.textContent = "🔇";
     });
-});
+});;
 
 async function getPoesia() {
     let response = await fetch("https://poetrydb.org/random");
